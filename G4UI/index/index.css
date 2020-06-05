@@ -1,0 +1,57 @@
+
+/* CSS Document */
+body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:676px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+
+#u0 {
+  position:absolute;
+  left:330px;
+  top:90px;
+  width:446px;
+  height:485px;
+}
+
+#u2 {
+  position:absolute;
+  left:58px;
+  top:128px;
+  width:140px;
+  height:40px;
+  background-color:#5FBBD8;
+  border:none;
+  border-radius:5px;
+}
+
+#u3 {
+  position:absolute;
+  left:58px;
+  top:258px;
+  width:140px;
+  height:40px;
+  background-color:#5FBBD8;
+  border:none;
+  border-radius:5px;
+  }
+
+#u4 {
+  position:absolute;
+  left:58px;
+  top:389px;
+  width:140px;
+  height:40px;
+  background-color:#5FBBD8;
+  border:none;
+  border-radius:5px;
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+ 
+<head>
+  <meta charset="UTF-8">
+  <title>FormData</title>
+    
+　<script>
+    function pageLoadProc() {
+      var e = document.getElementById("fileref");
+      e.onchange = function() {
+       if(e.files.length == 0)
+        return;
+       var f = e.file[0];
+       document.getElementById("fname").innerHTML = f.name;
+       document.getElementById("fsize").innerHTML = f.size;
+       document.getElementById("ftype").innerHTML = f.type;
+          
+       var r = new FileReader();
+       r.readAsText(f);
+      r.onload = function(){
+          var result = document.getElementById("result");
+          result .innerHTML = r.result;
+          }
+      r.onerror = function(){
+          alert("エラーコード:" + r.error.code);
+      }
+    }
+ }
+    
+  </script>
+</head>
+ 
+<body onload="pageLoadProc()">
+<p>参照しファイルの情報と内容を表示します</p>
+  <input type="file" id="fileref"></input>
+  <table>
+  <tr><td>ファイル名:</td>
+      <td><span id="fname"></span></td></tr>
+  <tr><td>ファイルサイズ:</td>
+      <td><span id="fsize"></span>バイト</td></tr>
+　<tr><td>MIMEタイプ:</td>
+     <td><span id="ftype"></span></td></tr>
+　</table>
+<textarea id ="result" style="width: 360px; height: 300px;">
+</textarea>
+</body>  
+</html>
